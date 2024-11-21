@@ -11,7 +11,8 @@ const Login = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    axios.post('http://localhost:3001/Login',{name,email,password})
+    // axios.post('http://localhost:3001/Login',{name,email,password})
+    axios.post('https://react-satyam3.onrender.com/Login',{name,email,password})
     .then(result => {console.log(result)
       if(result.data == "Login Successful")  {
         navigate('/Home')
